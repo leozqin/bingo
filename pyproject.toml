@@ -1,0 +1,23 @@
+[project]
+name = "bingo"
+version = "0.0.1"
+authors = [{ name = "Leo Qin", email = "me@leozqin.me" }]
+description = "A framework for defining randomized bingo cards as configuration (BaC)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["tabulate", "pyyaml", "jinja2", "weasyprint", "pypdf"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+bingo = "bingo.cli:cli"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["bingo"]
